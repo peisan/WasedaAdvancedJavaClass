@@ -1,4 +1,4 @@
-package lesson.scala.basics
+package lesson.scala.basics.fizzbuzz
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,7 @@ package lesson.scala.basics
  * Time: 13:12
  * To change this template use File | Settings | File Templates.
  */
-object FizzBuzz {
+object FizzBuzz_Fujioka {
   def main(args:Array[String]) = {
     val i = 3 //args(0).toInt
 
