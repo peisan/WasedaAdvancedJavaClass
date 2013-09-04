@@ -2,25 +2,24 @@ package lesson.scala.thread
 
 import scala.actors.Actor
 
-class PrintIntActorReceive extends Actor {
+class PrintIntActorReact extends Actor{
   def act(): Unit = {
     loop {  // continue receive without restart
-      val number :String = receive {
-        case i: Int => i.toString
-        case _ => "Not Supported Type"
+      react {
+        case i: Int => reply("reply" + i.toString)
+        case _ => reply("Not Supported Type")
       }
-      println("num " + number)
     }
   }
 }
 
-object PrintIntActorReceive{
+object PrintIntActorReact{
   def main(args: Array[String]): Unit = {
     println("main thread start")
     (1 to 10).foreach(
       i => {
         println("creating Actor: " + i)
-        println(new PrintIntActorReceive().start() ! i)
+        println(new PrintIntActorReact().start() !? i)
       }
     )
     println("main thread end")
