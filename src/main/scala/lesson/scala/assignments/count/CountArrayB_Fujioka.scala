@@ -1,6 +1,6 @@
-package lesson.scala.basics
+package lesson.scala.assignments.count
 
-object CountArrayB{
+object CountArrayB_Fujioka{
   def main(args: Array[String]) = {
 
   var x = 0
