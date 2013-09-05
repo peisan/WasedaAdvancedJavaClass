@@ -1,6 +1,6 @@
-package lesson.scala.basics
+package lesson.scala.assignments.primefactorization
 
-object PrimeFactorization {
+object PrimeFactorization_Arita {
   def main(args: Array[String]) = {
     primeNumberFactorization(99999).foreach(prime => println(prime))
   }
